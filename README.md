@@ -1,4 +1,4 @@
-# CADASTRO DE PESSOAS
+# PROJETO CADASTRO DE PESSOAS
 
 Projeto desafio MOCX aplicação completa (front e backend)<BR>
   
