@@ -23,7 +23,7 @@ function Pessoa() {
     save.disabled = false;
     edit.disabled = true;
 
-    const result = await axios.get("http://localhost:3333/pessoa");
+    const result = await axios.get("https://node-api-x2rq.onrender.com/pessoa");
     setPessoas(result.data);
     console.log(result.data);
   }
@@ -33,7 +33,7 @@ function Pessoa() {
     event.preventDefault();
      
     try {
-      await axios.post("http://localhost:3333/pessoa", {
+      await axios.post("https://node-api-x2rq.onrender.com/pessoa", {
         nome: nome,
         cpf: cpf,
         data: data,
@@ -66,7 +66,7 @@ function Pessoa() {
   //Deletar
   async function DeletePessoa(_id) {
     try {
-      await axios.delete("http://localhost:3333/pessoa/" + _id).then(function (response){
+      await axios.delete("https://node-api-x2rq.onrender.com/pessoa/" + _id).then(function (response){
         alertV(response.data.message);
       });
       
@@ -82,7 +82,7 @@ function Pessoa() {
     event.preventDefault();
     try {
       await axios.patch(
-        "http://localhost:3333/pessoa/" +
+        "https://node-api-x2rq.onrender.com/pessoa/" +
           pessoas.find((u) => u._id === _id)._id || _id,
         {
           _id: _id,
