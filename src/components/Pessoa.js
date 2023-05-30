@@ -155,7 +155,7 @@ function Pessoa() {
     erro.hidden = true;
   }
 
-
+ 
     return (
       <div>
       <h1 class="tit" >CADASTRO DE PESSOA</h1>
@@ -235,7 +235,7 @@ function Pessoa() {
       <table class="table table-hover table-dark mt-4"  align="center" >
         <thead>
           <tr>
-            {/* <th scope="col">Id</th> */}
+            <th scope="col">ID</th> 
             <th scope="col">Nome</th>
             <th scope="col">CPF</th>
             <th scope="col">Data</th>
@@ -247,7 +247,7 @@ function Pessoa() {
           return (
             <tbody>
               <tr>
-                {/* <th scope="row">{pessoa.id} </th> */}
+                <th scope="row">{pessoas.indexOf(pessoa)+1}</th> 
                 <td>{pessoa.nome}</td>
                 <td>{pessoa.cpf}</td>
                 <td>{dataFormatada(pessoa.data)}</td>
