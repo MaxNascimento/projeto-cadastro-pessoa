@@ -116,8 +116,9 @@ function Pessoa() {
     let dia = new Date(timestamp).getDate();
     let mes = new Date(timestamp).getMonth()+1;
     let ano = new Date(timestamp).getFullYear();
-   
-    let dt = ((dia<31?dia+1:dia)+'/'+(mes<10?'0':'')+(mes)+'/'+(ano))
+    dia = (dia<31?dia+1:dia)
+
+    let dt = ((dia<10?'0':'')+(dia)+'/'+(mes<10?'0':'')+(mes)+'/'+(ano))
     return dt;
   }
 
