@@ -11,7 +11,7 @@ npm install
 
 #### Tudo pronto, para executar o projeto use
 ```
-npm start
+npm run app
 ```
   
   
