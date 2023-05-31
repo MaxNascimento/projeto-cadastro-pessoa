@@ -23,7 +23,7 @@ module.exports = {
         }
 
         if(!data){
-            return response.status(400).json({error: "Necessário informar CPF!"});
+            return response.status(400).json({error: "Necessário informar Data!"});
         }
 
         
