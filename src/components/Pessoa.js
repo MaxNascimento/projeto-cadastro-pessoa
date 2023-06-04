@@ -13,7 +13,6 @@ function Pessoa() {
     (async () => await Load())();
   }, []);
  
-  //Carregar Dados
   async function Load() {
     var cp = document.getElementById('cpf')
     var save = document.getElementById('save')
@@ -28,7 +27,6 @@ function Pessoa() {
     console.log(result.data);
   }
   
-  //Salvar
   async function save(event) {
     event.preventDefault();
      
@@ -47,7 +45,6 @@ function Pessoa() {
     }
   }
 
-  //Editar
   async function EditPessoa(pessoas) {
     var cp = document.getElementById('cpf')
     var save = document.getElementById('save')
@@ -63,7 +60,6 @@ function Pessoa() {
     setId(pessoas._id);
   }
   
-  //Deletar
   async function DeletePessoa(_id) {
     try {
       await axios.delete("http://localhost:3333/pessoa/" + _id).then(function (response){
@@ -76,8 +72,7 @@ function Pessoa() {
       alertF(error.response.data.error);
     }
   }
-
-  //Alterar
+  
   async function update(event) {
     event.preventDefault();
     try {
@@ -101,7 +96,6 @@ function Pessoa() {
     }
   }
 
-  //Limpar
   function Clear() {
     setNome("");
     setCpf("");
